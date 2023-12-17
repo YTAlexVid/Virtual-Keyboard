@@ -1,0 +1,20 @@
+.keyboard{
+    display: grid;
+    margin: 100px auto;
+    width: 1500px;
+    height: 500px;
+    grid-template-columns: repeat(30, 0.5fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+.key{
+    border: solid 1px red;
+}
+.key2{
+    grid-column: span 2;
+}
+.key3{
+    grid-column: span 3;
+}
+.key4{
+    grid-column: span 4;
+}
