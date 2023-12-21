@@ -1,13 +1,43 @@
 .keyboard{
     display: grid;
-    margin: 100px auto;
+    margin: 70px auto;
     width: 1500px;
     height: 500px;
+    column-gap: 10px;
+    row-gap: 10px;
     grid-template-columns: repeat(30, 0.5fr);
     grid-template-rows: repeat(5, 1fr);
+    user-select: none;
+    color: white;
+}
+.textField {
+    display: block;
+    width: 95%;
+    height: 200px;
+    margin: 30px auto 10px;
+    padding: 10px;
+    font-size: 18px;
+    color: #444;
+}
+body{
+    background: rgb(29, 37, 47);
 }
 .key{
-    border: solid 1px red;
+    border: solid 3px darkslateblue;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.1s;
+}
+.keySymbol_upper{
+    position: absolute;
+    top: 7px;
+    left: 5px;
+}
+.clickActive{
+    background: rgb(91, 77, 177);
+}
+.active{
+    background: rgb(91, 77, 177);
 }
 .key2{
     grid-column: span 2;
@@ -17,4 +47,42 @@
 }
 .key4{
     grid-column: span 4;
+}
+.key12{
+    grid-column: span 12;
+}
+.key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.keySymbol{
+    font-size: 30px;
+}
+.themes{
+    display: flex;
+}
+.themeKey{
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.themeKey1{
+    border: solid 3px darkslateblue;
+    color: white;
+    background: rgb(29, 37, 47);
+}
+.themeKey2{
+    border: solid 3px hotpink;
+    color: black;
+    background: white;
+}
+.themeKey3{
+    border: solid 3px black;
+    color: black;
+    background: white;
 }
