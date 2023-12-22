@@ -13,12 +13,24 @@ let capsCd=false;
 let curLayout = +localStorage.getItem('curLayout');
 keyboard.innerHTML = layouts[curLayout];
 
+switch(+localStorage.getItem('theme')){
+    case 1:
+        setTheme1();
+        break;
+    case 2:
+        setTheme2();
+        break;
+    case 3:
+        setTheme3();
+        break;
+}
 
 //theme click event listeners
 document.querySelector('.themeKey1').addEventListener('click', ()=>{
     setTheme1();
 })
 function setTheme1(){
+    localStorage.setItem('theme', 1);
     changeStylesheetRule(document.styleSheets[1], '.key', 'border', 'solid 3px darkslateblue');
     changeStylesheetRule(document.styleSheets[1], 'body', 'background', 'rgb(29, 37, 47)');
     changeStylesheetRule(document.styleSheets[1], 'body', 'color', 'white');
@@ -29,6 +41,7 @@ document.querySelector('.themeKey2').addEventListener('click', ()=>{
     setTheme2()
 })
 function setTheme2(){
+    localStorage.setItem('theme', 2);
     changeStylesheetRule(document.styleSheets[1], '.key', 'border', 'solid 3px deeppink');
     changeStylesheetRule(document.styleSheets[1], 'body', 'background', 'white');
     changeStylesheetRule(document.styleSheets[1], 'body', 'color', 'black');
@@ -39,6 +52,7 @@ document.querySelector('.themeKey3').addEventListener('click', ()=>{
     setTheme3()
 })
 function setTheme3(){
+    localStorage.setItem('theme', 3);
     changeStylesheetRule(document.styleSheets[1], '.key', 'border', 'solid 3px black');
     changeStylesheetRule(document.styleSheets[1], 'body', 'background', 'white');
     changeStylesheetRule(document.styleSheets[1], 'body', 'color', 'black');
